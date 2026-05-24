@@ -7,8 +7,8 @@ class Player(CircleShape):
     super().__init__(x, y, PLAYER_RADIUS)
     self.rotation = 0.0
 
-    def draw(self, screen: pygame.Surface) -> None:
-        pygame.draw.polygon(screen, "white", self.triangle(), LINE_WIDTH)
+  def draw(self, screen: pygame.Surface) -> None:
+    pygame.draw.polygon(screen, "white", self.triangle(), LINE_WIDTH)
 
   def triangle(self) -> list[pygame.Vector2]:
       forward = pygame.Vector2(0, 1).rotate(self.rotation)
